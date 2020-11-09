@@ -35,12 +35,11 @@ def main() :
             msg = "Enter the number of drinks you want to buy : "
             title = "Vending Machine"
             sn = easygui.integerbox(msg,title)
-
-            msg = "Please deposit the money : \n Pricelist \n Coca-cola : $2.5 \n Aqua : $0.75 \n Sprite : $2.25 \n Pepsi : $1.75 \n Greenfield : $3.5"
+            cost = sn*need
+            msg = "Please deposit the money : \n Pricelist \n Coca-cola : $2.5 \n Aqua : $0.75 \n Sprite : $2.25 \n Pepsi : $1.75 \n Greenfield : $3.5 \n \n Cost : $" + str(cost) 
             title = "Vending Machine"
             money = easygui.integerbox(msg,title)
 
-            cost = sn*need
             change = float(money) - cost
             
             if (change>= 0) :
@@ -67,7 +66,7 @@ def main() :
                         easygui.msgbox(msg,title,ok_button='Exit')
 
             else :
-                msg = "You didn't deposit enough money, please begin again"
+                msg = "You didn't deposit enough money, please start again."
                 title = "Soda Machine"
                 easygui.msgbox(msg,title)
         else :

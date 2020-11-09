@@ -1,4 +1,4 @@
-('D:\\Pengkom\\VM\\build\\main\\PYZ-00.pyz',
+('D:\\Pengkom\\VM\\Vending-Machine\\build\\main\\PYZ-00.pyz',
  [('multiprocessing.popen_fork',
    'c:\\users\\ka\\appdata\\local\\programs\\python\\python38\\lib\\multiprocessing\\popen_fork.py',
    'PYMODULE'),
