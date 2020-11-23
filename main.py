@@ -15,12 +15,12 @@ def main() :
         myChoice = easygui.ynbox(msg,title,choices)
         
         if myChoice == 1 :
-            msg = "Which drinks do you like to buy?"
+            msg = "Which drinks do you like to buy?\nPlease click on the button (not the image)..."
             title = "Vending Machine"
             choices = ['Coca-cola','Aqua','Sprite','Pepsi','Greenfield']
-            choice = easygui.buttonbox(msg,title,choices)
-
-            if (choice == "Coca-cola") :
+            img = ["1.png", "2.png", "3.png","4.png","5.png"]
+            choice = easygui.buttonbox(msg,title,image=img,choices=choices)
+            if (choice == "Coca-cola" or img == "1.png") :
                 need = cola
             elif (choice == "Aqua") :
                 need = aqua
@@ -30,13 +30,12 @@ def main() :
                 need = pepsi
             elif (choice == "Greenfield") :
                 need = gf
-            print(need)
 
-            msg = "Enter the number of drinks you want to buy : "
+            msg = "Enter the number of drinks you want to buy : (maximum 5 pieces)"
             title = "Vending Machine"
             sn = easygui.integerbox(msg,title)
             cost = sn*need
-            msg = "Please deposit the money : \n Pricelist \n Coca-cola : $2.5 \n Aqua : $0.75 \n Sprite : $2.25 \n Pepsi : $1.75 \n Greenfield : $3.5 \n \n Cost : $" + str(cost) 
+            msg = "Please deposit the money : \n Pricelist \n Coca-cola : $2.5 \n Aqua : $0.75 \n Sprite : $2.25 \n Pepsi : $1.75 \n Greenfield : $3.5 \n \n Please input less than $100 \n Cost : $" + str(cost) 
             title = "Vending Machine"
             money = easygui.integerbox(msg,title)
 
